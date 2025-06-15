@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="x-icon" href="./assets/icon.png">
   <title>Vaibhav Aggarwal - Portfolio</title>
-  <!-- Google Font: Poppins for a modern look -->
+  <!-- Google Font: Inter for modern look -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
     rel="stylesheet"
   >
   <!-- Font Awesome for icons -->
@@ -20,7 +21,6 @@
   <header class="main-header">
     <nav class="navbar container">
       <div class="nav-logo">
-        <!-- Optional: Logo text -->
         <a href="#home" class="logo-text">VA</a>
       </div>
       <ul class="nav-links">
@@ -33,229 +33,334 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-icons">
-        <a href="https://linkedin.com/in/vaibhavagg2005" target="_blank">
+        <a href="https://linkedin.com/in/vaibhavagg2005" target="_blank" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/Vaibhav-2005" target="_blank">
+        <a href="https://github.com/Vaibhav-2005" target="_blank" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </nav>
   </header>
 
-  <!-- Hero Section (Full-Screen Dark Blue Gradient) -->
+  <!-- Hero Section -->
   <section id="home" class="hero-section">
     <div class="container hero-container">
-      <!-- Left Side: Photo -->
-      <div class="hero-image">
-        <!-- Replace 'photo.jpg' with your actual image -->
-        <img src="photo.jpg" alt="photo" />
-      </div>
-      <!-- Right Side: Name & Summary -->
       <div class="hero-text">
+        <h4 class="hero-greeting">Hi, I'm</h4>
         <h1>Vaibhav Aggarwal</h1>
-        <h2 class="hero-subtitle">B. Tech (CSE) Student</h2>
+        <h2 class="hero-subtitle">B. Tech <span class="highlight">Computer Science</span> Student</h2>
         <p class="hero-summary">
-          A passionate B. Tech Computer Science Student with a strong foundation
-          in Web Development. I enjoy developing Web Applications that provide
-          a seamless user experience. Skilled in Core Java, MERN stack, and project
-          execution, with proven success in internships and competitions.
+          Passionate about creating seamless web experiences with expertise in Core Java and MERN stack. 
+          Proven track record in project execution, internships, and tech competitions.
         </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#projects" class="btn btn-secondary">View Projects</a>
+        </div>
       </div>
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="./assets/photo.png" alt="Vaibhav Aggarwal" />
+          <div class="image-border"></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </section>
 
   <!-- Experience Section -->
-<section id="experience" class="section container">
-    <h2 class="section-title">Experience</h2>
-    <div class="experience-grid">
-      <!-- Experience Card -->
-      <div class="experience-card">
-        <div class="exp-header">
-          <h3>IndianOil Corp. Limited</h3>
-          <span class="exp-role">Information Systems Intern</span>
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">02.</span> Experience</h2>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="exp-header">
+            <div>
+              <h3>IndianOil Corp. Limited</h3>
+              <span class="exp-role">Information Systems Intern</span>
+            </div>
+            <span class="exp-duration">June - August 2024, Noida</span>
+          </div>
+          <ul class="exp-details">
+            <li>Built a Flask web app with MySQL database to track fuel inventory on the company's internal network.</li>
+            <li>Automated report generation using APScheduler, eliminating manual work.</li>
+            <li>Implemented data retrieval from SAP using SQLAlchemy for seamless database integration.</li>
+            <li>Performed data cleaning and analysis, followed by end-to-end design and development.</li>
+            <li>Enhanced dashboards with row highlighting using Pandas & OpenPyXL.</li>
+          </ul>
         </div>
-        <p class="exp-duration">June - August 2024, Noida</p>
-        <ul class="exp-details">
-          <li>Built a Flask web app with a MySQL database to help track fuel inventory on the company’s internal network.</li>
-          <li>Used APScheduler to automatically generate reports on a schedule, removing the need for manual work.</li>
-          <li>Implemented data retrieval from SAP using SQLAlchemy, enabling seamless database integration.</li>
-          <li>Performed data cleaning and analysis, followed by end-to-end design and development of the software solution.</li>
-          <li>Added row highlighting to dashboards using Pandas & OpenPyXL.</li>
-        </ul>
       </div>
     </div>
   </section>
   
-
-  <!-- Projects Section (Grid of Cells) -->
-  <section id="projects" class="section container">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <!-- Project 1: PindScript -->
-      <div class="project-cell">
-        <div class="project-header">PindScript (Ongoing)</div>
-        <div class="project-details">
-          <ul>
-            <li>Designed and constructed PindScript, a custom toy programming language with 15+ Punjabi-inspired keywords to promote culturally relevant programming education. </li>
-            <li>Built out 10+ core language capabilities such as variable declarations, arithmetic expressions, and structured control flow constructs (if, loops).</li>
-            <li>Constructed a multi-scope environment model enabling variable resolution across 3+ nested levels, handling both global and local scope accurately. </li>
-          </ul>
-          <!-- No link provided for PindScript -->
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">03.</span> Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div>
+              <h3>PindScript</h3>
+              <span class="project-status">Ongoing</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <p>A custom toy programming language with Punjabi-inspired keywords to promote culturally relevant programming education.</p>
+            <ul class="project-features">
+              <li>15+ Punjabi-inspired keywords</li>
+              <li>10+ core language capabilities</li>
+              <li>Multi-scope environment model</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <!-- Project 2: NexLance -->
-      <div class="project-cell">
-        <div class="project-header">NexLance</div>
-        <div class="project-details">
-          <ul>
-            <li>Deployed and developed a full-stack job platform with over 15+ functional components.</li>
-            <li>Built a resume upload feature using React (frontend) and Node.js with multer for backend file handling, ensuring smooth and error-free uploads. </li>
-            <li>Used MongoDB to store resume metadata and user details securely.</li>
-            <li>Added JWT-based authentication and authorization to protect all platform routes and manage access control effectively.</li>
-          </ul>
-          <p class="project-link">
-            <a href="https://nexlance.netlify.app" target="_blank">
-              See It Live <i class="fas fa-external-link-alt"></i>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div>
+              <h3>NexLance</h3>
+            </div>
+          </div>
+          <div class="project-content">
+            <p>Full-stack job platform with resume upload and JWT authentication.</p>
+            <ul class="project-features">
+              <li>15+ functional components</li>
+              <li>Resume upload with React & Node.js</li>
+              <li>MongoDB for data storage</li>
+              <li>JWT-based authentication</li>
+            </ul>
+            <a href="https://nexlance.netlify.app" target="_blank" class="project-link">
+              View Project <i class="fas fa-external-link-alt"></i>
             </a>
-          </p>
+          </div>
         </div>
-      </div>
-      <!-- Project 3: Code Editor -->
-      <div class="project-cell">
-        <div class="project-header">Code Editor</div>
-        <div class="project-details">
-          <ul>
-            <li>Made using HTML, CSS and Javascript.</li>
-            <li>Launched an interactive coding environment that delivered immediate visual feedback on HTML and CSS changes.</li>
-            <li>Utilized by 12 developers, leading to quicker iterations and a notable rise in project completion rates.</li>
-          </ul>
-          <p class="project-link">
-            <a href="https://code-editor-2005.netlify.app" target="_blank">
-              See It Live <i class="fas fa-external-link-alt"></i>
+        
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div>
+              <h3>Code Editor</h3>
+            </div>
+          </div>
+          <div class="project-content">
+            <p>Interactive coding environment with immediate visual feedback.</p>
+            <ul class="project-features">
+              <li>HTML, CSS, JavaScript</li>
+              <li>Real-time preview</li>
+              <li>Used by 12 developers</li>
+            </ul>
+            <a href="https://code-editor-2005.netlify.app" target="_blank" class="project-link">
+              View Project <i class="fas fa-external-link-alt"></i>
             </a>
-          </p>
+          </div>
         </div>
       </div>
-      <!-- Optional: More projects can be added here -->
     </div>
   </section>
 
   <!-- Education Section -->
-  <!-- ============ Education Section ============ -->
-<section id="education" class="section">
-    <h2>Education</h2>
-    <div class="education-grid">
-      
-      <!-- Example Education Card -->
-      <div class="education-card">
-        <div class="edu-header">
-          <h3>Chandigarh Engineering College</h3>
-          <span class="edu-degree">Bachelor of Technology</span>
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">04.</span> Education</h2>
+      <div class="education-timeline">
+        <!-- Education 1 -->
+        <div class="timeline-item">
+          <div class="timeline-date">2022 - 2026</div>
+          <div class="timeline-content">
+            <h3>Chandigarh Engineering College</h3>
+            <span class="degree">Bachelor of Technology in Computer Science</span>
+            <p>Specialized in cutting-edge computer science technologies and software development methodologies.</p>
+          </div>
         </div>
-        <p class="edu-duration">2022 - 2026</p>
-        <ul class="edu-details">
-          <li>Specialized in Computer Science & Engineering</li>
-        </ul>
-      </div>
-  
-      <!-- Another Education Card -->
-      <div class="education-card">
-        <div class="edu-header">
-          <h3>Floradale Public School</h3>
-          <span class="edu-degree">Intermediate</span>
+        
+        <!-- Education 2 -->
+        <div class="timeline-item">
+          <div class="timeline-date">2022</div>
+          <div class="timeline-content">
+            <h3>Floradale Public School</h3>
+            <span class="degree">Intermediate (Science with Mathematics)</span>
+            <p>Scored 81% with focus on mathematics and computer science fundamentals.</p>
+          </div>
         </div>
-        <p class="edu-duration">2022</p>
-        <ul class="edu-details">
-          <li>Completed Science Stream with Mathematics scoring 81%</li>
-        </ul>
-      </div>
-      
-      <!-- Another Education Card -->
-      <div class="education-card">
-        <div class="edu-header">
-          <h3>Bihani Children's Academy</h3>
-          <span class="edu-degree">Matriculation</span>
+        
+        <!-- Education 3 -->
+        <div class="timeline-item">
+          <div class="timeline-date">2020</div>
+          <div class="timeline-content">
+            <h3>Bihani Children's Academy</h3>
+            <span class="degree">Matriculation</span>
+            <p>Completed with 83% in CBSE Board examinations.</p>
+          </div>
         </div>
-        <p class="edu-duration">2020</p>
-        <ul class="edu-details">
-          <li>Scored 83% in CBSE Board</li>
-        </ul>
       </div>
-  
     </div>
   </section>
-  
 
   <!-- Skills Section -->
-  <section id="skills" class="section container">
-    <h2>Technical Skills</h2>
-    <ul class="skills-list">
-      <li>Core Java</li>
-      <li>C/C++</li>
-      <li>Python</li>
-      <li>React.js</li>
-      <li>Node.js</li>
-      <li>Express.js</li>
-      <li>MySQL</li>
-      <li>MongoDB</li>
-    </ul>
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">05.</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="skill-items">
+            <span class="skill-item">Core Java</span>
+            <span class="skill-item">C/C++</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">JavaScript</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-items">
+            <span class="skill-item">React.js</span>
+            <span class="skill-item">HTML5</span>
+            <span class="skill-item">CSS3</span>
+            <span class="skill-item">Tailwind</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-items">
+            <span class="skill-item">Node.js</span>
+            <span class="skill-item">Express.js</span>
+            <span class="skill-item">Flask</span>
+            <span class="skill-item">REST APIs</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Databases</h3>
+          <div class="skill-items">
+            <span class="skill-item">MySQL</span>
+            <span class="skill-item">MongoDB</span>
+            <span class="skill-item">SQLAlchemy</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Achievements & Certifications Section (3 Columns with Trophy Icons) -->
-  <section id="achievements" class="section container">
-    <h2>Achievements & Certifications</h2>
-    <div class="achievements-grid">
-      <!-- Column 1: Certifications -->
-      <div class="ach-column">
-        <h3>Certifications</h3>
-        <ul>
-          <li>3× AWS Academy Graduate Certified</li>
-          <li>Celonis Academic Process Mining Fundamentals</li>
-          <li>3× MongoDB Atlas Certifications</li>
-          <li>Postman API Fundamentals Student Expert</li>
-        </ul>
-      </div>
-      <!-- Column 2: Academic Achievements -->
-      <div class="ach-column">
-        <h3>Academic Achievements</h3>
-        <ul>
-          <li><i class="fas fa-trophy"></i> Won Tech Titans Contest among 70+ participants at Aaveg’25.</li>
-          <li><i class="fas fa-trophy"></i> Stood 2nd in Tech Tribe Contest. </li>
-          <li><i class="fas fa-trophy"></i> 2nd Position among 150 teams in Coding Competition Fusing Bytes 2024</li>
-          <li><i class="fas fa-trophy"></i> Runner-up in Annual College Tech Fest Zest-o-Fiesta 2024</li>
-          <li>Top 7 at RBI90Quiz State Round Punjab</li>
-          <li><i class="fas fa-trophy"></i> 1st Place at Eminence 2024 Non-Technical Quiz</li>
-        </ul>
-      </div>
-      <!-- Column 3: Extra Curricular -->
-      <div class="ach-column">
-        <h3>Extra Curricular</h3>
-        <ul>
-          <li>Coordinator in Fusion-X Departmental Event.</li>
-          <li>Coordinated in Tech Talk 2K25 ft. Love Babbar, Lakshay Kumar.</li>
-          <li>Lead Coordinator at Annual College Technical Fest 2024. </li>
-          <li>Contributor at GirlScript Summer of Code 2024.</li>
-          <li>Student Ambassador of LetsUpgrade</li>
-          <li>Student Ambassador at Kotlin Conf ’24</li>
-        </ul>
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">06.</span> Achievements</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3>Tech Titans Winner</h3>
+          <p>Won among 70+ participants at Aaveg'25</p>
+        </div>
+        
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3>2nd in Coding Competition</h3>
+          <p>Among 150 teams in Fusing Bytes 2024</p>
+        </div>
+        
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>3× AWS Certified</h3>
+          <p>AWS Academy Graduate certifications</p>
+        </div>
+        
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Postman Expert</h3>
+          <p>API Fundamentals Student Expert</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section container">
-    <h2>Contact</h2>
-    <p><strong>Location:</strong> Rajasthan, India</p>
-    <p><strong>Email:</strong> <a href="mailto:vaibhav101agg@gmail.com">vaibhav101agg@gmail.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:+91-9509267223">+91-9509267223</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Vaibhav-2005" target="_blank">Vaibhav-2005</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vaibhavagg2005" target="_blank">vaibhavagg2005</a></p>
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">07.</span> Contact</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>Feel free to reach out for collaborations or just to say hello!</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Rajasthan, India</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:vaibhav101agg@gmail.com">vaibhav101agg@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+91-9509267223">+91-9509267223</a>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="https://linkedin.com/in/vaibhavagg2005" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Vaibhav-2005" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Vaibhav Aggarwal. All Rights Reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-copyright">
+          <p>&copy; 2025 Vaibhav Aggarwal. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
